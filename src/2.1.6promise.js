@@ -1,11 +1,11 @@
 const condition = 1; // true면 resolve, false면 reject
 
-objdata = {status:200, sucStr:"성공", err:'프로미스함수 조건에 맞지 않습니다'}
+objdata = { status: 200, sucStr: "성공", err: '프로미스함수 조건에 맞지 않습니다' }
 const promise = new Promise((resolve, reject) => {
   if (condition) {
     resolve(objdata)
   } else {
-    objdata.status=500
+    objdata.status = 500
     reject(objdata)
   }
 })
@@ -15,10 +15,10 @@ const promise = new Promise((resolve, reject) => {
 promise
   .then((message) => {
     // 성공(resolve)한 경우 실행
-    return {status: message.status, data:message.sucStr}
-  })git 
-  .then(result=>{
-    console.log(result); 
+    return { status: message.status, data: message.sucStr }
+  })
+  .then(result => {
+    console.log(result);
   })
   .catch((error) => {
     console.error(error); // 실패(reject)한 경우 실행
