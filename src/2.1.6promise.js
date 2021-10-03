@@ -9,7 +9,7 @@ const promise = new Promise((resolve, reject) => {
     reject(objdata)
   }
 })
-
+ 
 // 프로미스 객체는 then 체인으로 이후 메서드를 실행 가능
 
 promise
